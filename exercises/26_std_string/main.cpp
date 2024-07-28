@@ -1,6 +1,7 @@
 ﻿#include "../exercise.h"
 #include <string>
 
+
 // READ: 字符串 <https://zh.cppreference.com/w/cpp/string/basic_string>
 
 int main(int argc, char **argv) {
@@ -13,6 +14,6 @@ int main(int argc, char **argv) {
     ASSERT((std::is_same_v<decltype(hello), std::string>), "Fill in the missing type.");
     ASSERT((std::is_same_v<decltype(world), const char*>), "Fill in the missing type.");
     // TODO: 将 `?` 替换为正确的字符串
-    ASSERT(hello + ", " + world + '!' == "Hello,world!", "Fill in the missing string.");
+    ASSERT(hello + ", " + world + '!' == "Hello, world!", "Fill in the missing string.");
     return 0;
 }
