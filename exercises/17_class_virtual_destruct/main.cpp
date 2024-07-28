@@ -10,7 +10,7 @@ struct A {
     A() {
         ++num_a;
     }
-    ~A() {
+    virtual ~A() {
         --num_a;
     }
 
