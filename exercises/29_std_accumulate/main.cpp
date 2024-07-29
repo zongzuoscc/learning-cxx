@@ -3,7 +3,7 @@
 
 // READ: `std::accumulate` <https://zh.cppreference.com/w/cpp/algorithm/accumulate>
 
-int accu(int a,int b)
+float accu(float a,float b)
 {
     return a*b;
 }
