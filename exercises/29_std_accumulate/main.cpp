@@ -3,11 +3,6 @@
 
 // READ: `std::accumulate` <https://zh.cppreference.com/w/cpp/algorithm/accumulate>
 
-float accu(float a,float b)
-{
-    return a*b;
-}
-
 int main(int argc, char **argv) {
     using DataType = float;
     int shape[]{1, 3, 224, 224};
@@ -17,7 +12,7 @@ int main(int argc, char **argv) {
     //       - 连续存储；
     //       的张量占用的字节数
     // int size =
-    int size=std::accumulate(shape,shape+4,1,accu);
+    int size=(std::accumulate(std::begin(shape), std::end(shape), 1, std::multiplies<int>()))*(sizeof(DataType));
     ASSERT(size == 602112, "4x1x3x224x224 = 602112");
     return 0;
 }
